@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>IA aplicada na prática da Experiência dos Clientes (CX) · Campanha</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--r:#4A43C4;--rd:#3A33A8;--ind:#2A2480;--teal:#1E8DB5;--amar:#F2C84B;--coral:#E8553A;
+--ink:#1F1D3A;--mut:#6A6985;--g2:#E1E0EE;--g1:#F3F2F8}
+*{box-sizing:border-box}
+html{background:#D9D8E6}
+body{margin:0;padding:22px 14px 60px;font-family:Lato,'Helvetica Neue',Arial,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+.btn{position:fixed;right:18px;top:14px;z-index:50;background:var(--ink);color:#fff;border:0;border-radius:99px;padding:9px 18px;font:700 14px Lato,sans-serif;cursor:pointer}
+.slide{--u:calc(100cqw/1280);position:relative;width:min(100%,1280px);margin:0 auto 22px;aspect-ratio:16/9;container-type:inline-size;overflow:hidden;border-radius:18px}
+.slide>.s{position:absolute;inset:0;padding:calc(64*var(--u)) calc(72*var(--u))}
+.t-w{background:#fff}.t-g{background:var(--g1)}.t-f{background:#3A33A8;color:#fff}.t-k{background:linear-gradient(150deg,#4A43C4 0%,#3A33A8 60%,#2A2480 100%);color:#fff}.t-n{background:#241F78;color:#fff}
+.ey{font-size:calc(15*var(--u));letter-spacing:.16em;text-transform:uppercase;font-weight:900;color:var(--r)}
+.t-k .ey,.t-n .ey{color:#C9C5F7}
+h1,h2{text-wrap:balance;margin:0;font-weight:900;letter-spacing:-.03em;line-height:1.02}
+h2{font-size:calc(46*var(--u));margin-top:calc(10*var(--u))}
+.big{font-size:calc(24*var(--u));line-height:1.36;margin:0}
+.pic{display:block;border-radius:calc(12*var(--u));box-shadow:0 calc(8*var(--u)) calc(26*var(--u)) rgba(30,26,99,.22)}
+.cap{font-size:calc(15*var(--u));color:var(--mut);margin-top:calc(10*var(--u))}
+.t-k .cap,.t-n .cap{color:#CFCBFA}
+.src{font-size:calc(14*var(--u));color:var(--mut)}
+.t-k .src,.t-n .src{color:#CFCBFA}
+.tri{position:absolute;bottom:0;clip-path:polygon(50% 0,100% 100%,0 100%)}
+.card{background:#fff;color:var(--ink);border-radius:calc(22*var(--u));padding:calc(30*var(--u)) calc(32*var(--u))}
+.lb{font-size:calc(14*var(--u));letter-spacing:.14em;text-transform:uppercase;font-weight:900;color:var(--teal)}
+.cd p{margin:calc(10*var(--u)) 0 0;font-size:calc(22*var(--u));line-height:1.38}
+.cd p+.lb{margin-top:calc(18*var(--u))}
+.ch{display:inline-block;border-radius:99px;padding:calc(6*var(--u)) calc(16*var(--u));font-size:calc(14*var(--u));font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--teal)}
+.ch.b{background:var(--ind)}
+.num{font-size:calc(66*var(--u));font-weight:900;letter-spacing:-.03em;line-height:1}
+.fact span{display:block;margin-top:calc(8*var(--u));font-size:calc(18*var(--u));line-height:1.3;color:#DAD7FB}
+.bt{display:inline-flex;align-items:center;gap:calc(8*var(--u));padding:calc(14*var(--u)) calc(30*var(--u));border-radius:calc(99*var(--u));font-size:calc(20*var(--u));font-weight:900;text-decoration:none;background:var(--amar);color:#26215C}
+.scr{position:relative;overflow:hidden;border-radius:calc(12*var(--u));box-shadow:0 calc(8*var(--u)) calc(26*var(--u)) rgba(30,26,99,.22);background:#fff;height:calc(430*var(--u))}
+.scr img{display:block;width:100%;animation:scr 24s ease-in-out infinite alternate}
+@keyframes scr{0%,6%{transform:translateY(0)}94%,100%{transform:translateY(calc(-100% + 430*var(--u)))}}
+.tl{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:calc(14*var(--u));margin-top:calc(70*var(--u))}
+.tl:before{content:"";position:absolute;left:0;right:0;top:calc(9*var(--u));height:2px;background:rgba(255,255,255,.35)}
+.tl div{position:relative;padding-top:calc(34*var(--u))}
+.tl div:before{content:"";position:absolute;left:0;top:0;width:calc(20*var(--u));height:calc(20*var(--u));border-radius:50%;background:var(--amar)}
+.tl b{display:block;font-size:calc(30*var(--u));font-weight:900;letter-spacing:-.02em}
+.tl span{display:block;margin-top:calc(10*var(--u));font-size:calc(19*var(--u));line-height:1.35;color:#DAD7FB;max-width:calc(170*var(--u))}
+@media print{
+ @page{size:1280px 720px;margin:0}
+ html,body{background:#fff;padding:0}.btn{display:none}
+ .slide{width:1280px;height:720px;margin:0;border-radius:0;break-after:page;page-break-after:always}
+}
+body.present{padding:0;background:#000;overflow:hidden}
+body.present .btn{display:none}
+body.present .slide{display:none;position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(100vw,calc(100vh*16/9));margin:0;border-radius:0}
+body.present .slide.on{display:block}
+@keyframes scr3{0%{opacity:0;transform:translateY(0)}5%,14%{opacity:1;transform:translateY(0)}82%{opacity:1;transform:translateY(calc(-100% + 560*var(--u)))}92%{opacity:1;transform:translateY(calc(-100% + 560*var(--u)))}100%{opacity:0;transform:translateY(calc(-100% + 560*var(--u)))}}
+</style></head><body>
+<button class="btn" id="btn">Apresentar</button>
+
+<!-- 1 CAPA -->
+<section class="slide t-f"><div class="s">
+<h1 style="position:absolute;left:calc(72*var(--u));top:calc(250*var(--u));width:calc(760*var(--u));font-size:calc(58*var(--u));line-height:1.08">IA aplicada na prática da Experiência dos Clientes&nbsp;(CX)</h1>
+<img src="img/logo-fundacao-neg.svg" style="position:absolute;left:calc(72*var(--u));bottom:calc(56*var(--u));height:calc(54*var(--u))" alt="Fundação Vanzolini">
+</div></section>
+
+<!-- 2 OBJETIVO -->
+<section class="slide t-f"><div class="s">
+<div class="ey">objetivo</div>
+<h2 style="font-size:calc(44*var(--u));width:calc(760*var(--u));margin-top:calc(14*var(--u))">Vender inscrições de um curso rápido de entrada</h2>
+<p class="big" style="font-size:calc(21*var(--u));margin-top:calc(22*var(--u));width:calc(660*var(--u));color:#E4E2FC">Levar quem trabalha com CX, atendimento e relacionamento à aula ao vivo de IA aplicada. Mesmo modelo dos mini cursos de Portos e de Gestão de Projetos: curso curto, preço baixo e de/por.</p>
+<div style="position:absolute;left:calc(72*var(--u));bottom:calc(64*var(--u));display:flex;gap:calc(64*var(--u))">
+<div class="fact"><div class="num" style="font-size:calc(46*var(--u))">10/12</div><span style="font-size:calc(16*var(--u))">quinta<br>19h às 21h</span></div>
+<div class="fact"><div class="num" style="font-size:calc(46*var(--u))">2 h</div><span style="font-size:calc(16*var(--u))">on-line, ao vivo<br>com certificado</span></div>
+<div class="fact"><div class="num" style="font-size:calc(46*var(--u))">R$ 29,99</div><span style="font-size:calc(16*var(--u))">de R$ 210,00</span></div>
+</div></div></section>
+
+<!-- 3 BRIEFING -->
+<section class="slide t-g"><div class="s">
+<div class="ey">briefing</div>
+<h2 style="font-size:calc(64*var(--u));width:calc(1000*var(--u));margin-top:calc(18*var(--u));color:var(--ind)">A lacuna não é saber que a IA existe. É saber aplicar.</h2>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:calc(44*var(--u));position:absolute;left:calc(72*var(--u));right:calc(72*var(--u));bottom:calc(70*var(--u))">
+<div style="border-top:3px solid var(--r);padding-top:calc(18*var(--u))"><div class="lb" style="color:var(--r)">Para quem</div><p style="font-size:calc(21*var(--u));line-height:1.38;margin:calc(10*var(--u)) 0 0">Lideranças e profissionais de CX, atendimento, jornada e relacionamento que já ouviram falar de IA e não sabem aplicar no dia a dia.</p></div>
+<div style="border-top:3px solid var(--teal);padding-top:calc(18*var(--u))"><div class="lb">Como falar</div><p style="font-size:calc(21*var(--u));line-height:1.38;margin:calc(10*var(--u)) 0 0">Você, em segunda pessoa. Pergunta abre, afirmação fecha. Rotina de trabalho, sem jargão. Urgência só de calendário.</p></div>
+<div style="border-top:3px solid var(--amar);padding-top:calc(18*var(--u))"><div class="lb" style="color:#9A7A00">Em toda peça</div><p style="font-size:calc(21*var(--u));line-height:1.38;margin:calc(10*var(--u)) 0 0">Nome do curso, data e horário, de R$ 210,00 por R$ 29,99 e Inscreva-se. Sem cérebro, chip ou robô para falar de IA.</p></div>
+</div></div></section>
+
+<!-- 4 KV -->
+<section class="slide t-g"><div class="s">
+<img src="img/kv-master-1080x1350.png" class="pic" style="position:absolute;left:calc(72*var(--u));top:calc(40*var(--u));height:calc(640*var(--u))" alt="KV master">
+<div style="position:absolute;left:calc(700*var(--u));top:calc(250*var(--u));right:calc(100*var(--u))">
+<div class="ey">key visual</div>
+<h2 style="font-size:calc(48*var(--u));margin-top:calc(14*var(--u));color:var(--ind)">A jornada na mão</h2>
+<p class="big" style="font-size:calc(21*var(--u));margin-top:calc(20*var(--u));color:var(--mut)">Uma pessoa conduz a jornada do cliente. A IA aparece como aplicação concreta.</p>
+</div></div></section>
+
+<!-- 5 FORMATOS KV -->
+<section class="slide t-g"><div class="s">
+<div class="ey">desdobramento do kv</div><h2>Os formatos da campanha</h2>
+<div style="position:absolute;left:calc(72*var(--u));top:calc(190*var(--u));display:flex;gap:calc(44*var(--u));align-items:flex-start"><div><img src="img/kv-feed-1080x1080.png" class="pic" style="height:calc(380*var(--u))" alt=""><div class="cap">feed 1:1 · 1080×1080</div></div><div><img src="img/kv-stories-1080x1920.png" class="pic" style="height:calc(440*var(--u))" alt=""><div class="cap">stories e reels 9:16 · 1080×1920</div></div><div><img src="img/kv-linkedin-1200x628.png" class="pic" style="width:calc(420*var(--u))" alt=""><div class="cap">LinkedIn 1,91:1 · 1200×628</div></div></div></div><a class="bt" href="pecas/index.html#kv" target="_blank" rel="noopener" style="position:absolute;right:calc(72*var(--u));top:calc(48*var(--u));background:var(--r);color:#fff;font-size:calc(16*var(--u));padding:calc(10*var(--u)) calc(22*var(--u))">Ver as peças em detalhe ↗</a>
+</section>
+
+<!-- 6 POSTS -->
+<section class="slide t-n"><div class="s">
+<div class="ey">desdobramentos · posts orgânicos</div><h2 style="color:#fff">Cinco posts, com a copy ajustada</h2>
+<div style="margin-top:calc(34*var(--u));display:grid;grid-template-columns:repeat(5,1fr);gap:calc(18*var(--u))"><div style="background:rgba(255,255,255,.09);border-radius:calc(18*var(--u));padding:calc(22*var(--u));min-height:calc(300*var(--u))"><div class="lb" style="color:var(--amar)">1 · carrossel</div><div style="font-size:calc(22*var(--u));font-weight:900;line-height:1.22;margin-top:calc(14*var(--u))">Em qual etapa da jornada do seu cliente a IA já deveria estar trabalhando?</div><div style="font-size:calc(14*var(--u));color:#CFCBFA;margin-top:calc(16*var(--u))">data: equipe Vanzolini</div></div><div style="background:rgba(255,255,255,.09);border-radius:calc(18*var(--u));padding:calc(22*var(--u));min-height:calc(300*var(--u))"><div class="lb" style="color:var(--amar)">2 · estático</div><div style="font-size:calc(22*var(--u));font-weight:900;line-height:1.22;margin-top:calc(14*var(--u))">Em 2 horas, você sai com 4 materiais para aplicar no dia seguinte</div><div style="font-size:calc(14*var(--u));color:#CFCBFA;margin-top:calc(16*var(--u))">data: equipe Vanzolini</div></div><div style="background:rgba(255,255,255,.09);border-radius:calc(18*var(--u));padding:calc(22*var(--u));min-height:calc(300*var(--u))"><div class="lb" style="color:var(--amar)">3 · carrossel</div><div style="font-size:calc(22*var(--u));font-weight:900;line-height:1.22;margin-top:calc(14*var(--u))">Implementar IA na experiência do cliente vai muito além de escolher uma ferramenta</div><div style="font-size:calc(14*var(--u));color:#CFCBFA;margin-top:calc(16*var(--u))">data: equipe Vanzolini</div></div><div style="background:rgba(255,255,255,.09);border-radius:calc(18*var(--u));padding:calc(22*var(--u));min-height:calc(300*var(--u))"><div class="lb" style="color:var(--amar)">4 · stories</div><div style="font-size:calc(22*var(--u));font-weight:900;line-height:1.22;margin-top:calc(14*var(--u))">É AMANHÃ! Você sai com checklist, guia de prompts e matriz de priorização</div><div style="font-size:calc(14*var(--u));color:#CFCBFA;margin-top:calc(16*var(--u))">data: 09/12 (véspera da aula)</div></div><div style="background:rgba(255,255,255,.09);border-radius:calc(18*var(--u));padding:calc(22*var(--u));min-height:calc(300*var(--u))"><div class="lb" style="color:var(--amar)">5 · stories</div><div style="font-size:calc(22*var(--u));font-weight:900;line-height:1.22;margin-top:calc(14*var(--u))">HOJE | 19h às 21h. Últimas horas para se inscrever</div><div style="font-size:calc(14*var(--u));color:#CFCBFA;margin-top:calc(16*var(--u))">data: 10/12 (dia da aula)</div></div></div>
+<div style="position:absolute;left:calc(72*var(--u));right:calc(72*var(--u));bottom:calc(60*var(--u));display:flex;gap:calc(40*var(--u));align-items:center">
+<span class="ch">Chamada A</span><span style="font-size:calc(19*var(--u))">nasce do carrossel 1 e do estático 2</span>
+<span class="ch b" style="margin-left:calc(30*var(--u));background:#fff;color:var(--ind)">Chamada B</span><span style="font-size:calc(19*var(--u))">nasce do carrossel 3</span></div>
+</div></section>
+
+<!-- 7 POSTS CARROSSEL UM -->
+<section class="slide t-g"><div class="s">
+<div class="ey">posts · proposta de layout · carrossel 1 · data a definir pela equipe Vanzolini</div><h2 style="width:calc(1136*var(--u));font-size:calc(36*var(--u))">Carrossel 1: Em qual etapa da jornada do seu cliente a IA já deveria estar trabalhando?</h2>
+<div style="position:absolute;left:calc(72*var(--u));top:calc(215*var(--u));display:flex;gap:calc(26*var(--u));align-items:flex-start"><div><img src="img/posts/c1-1.png" class="pic" style="width:calc(264*var(--u))" alt=""><div class="cap">1 · a pergunta</div></div><div><img src="img/posts/c1-2.png" class="pic" style="width:calc(264*var(--u))" alt=""><div class="cap">2 · as 4 frentes da IA</div></div><div><img src="img/posts/c1-3.png" class="pic" style="width:calc(264*var(--u))" alt=""><div class="cap">3 · saber não basta</div></div><div><img src="img/posts/c1-4.png" class="pic" style="width:calc(264*var(--u))" alt=""><div class="cap">4 · inscrição</div></div></div></div><a class="bt" href="pecas/index.html#posts" target="_blank" rel="noopener" style="position:absolute;right:calc(72*var(--u));top:calc(48*var(--u));background:var(--r);color:#fff;font-size:calc(16*var(--u));padding:calc(10*var(--u)) calc(22*var(--u))">Ver as peças em detalhe ↗</a>
+</section>
+
+<!-- 8 POSTS CARROSSEL TRES -->
+<section class="slide t-g"><div class="s">
+<div class="ey">posts · proposta de layout · carrossel 3 · data a definir pela equipe Vanzolini</div><h2 style="width:calc(1136*var(--u));font-size:calc(36*var(--u))">Carrossel 3: Implementar IA em CX vai além de escolher uma ferramenta</h2>
+<div style="position:absolute;left:calc(72*var(--u));top:calc(215*var(--u));display:flex;gap:calc(19*var(--u));align-items:flex-start"><div><img src="img/posts/c3-1.png" class="pic" style="width:calc(212*var(--u))" alt=""><div class="cap">1 · gancho</div></div><div><img src="img/posts/c3-2.png" class="pic" style="width:calc(212*var(--u))" alt=""><div class="cap">2 · os gargalos</div></div><div><img src="img/posts/c3-3.png" class="pic" style="width:calc(212*var(--u))" alt=""><div class="cap">3 · o que considerar</div></div><div><img src="img/posts/c3-4.png" class="pic" style="width:calc(212*var(--u))" alt=""><div class="cap">4 · quem ensina</div></div><div><img src="img/posts/c3-5.png" class="pic" style="width:calc(212*var(--u))" alt=""><div class="cap">5 · decisões estratégicas</div></div></div><div class="src" style="position:absolute;left:calc(72*var(--u));bottom:calc(34*var(--u))">Fotos dos docentes retiradas da página do curso; uso de imagem a autorizar.</div></div><a class="bt" href="pecas/index.html#posts3" target="_blank" rel="noopener" style="position:absolute;right:calc(72*var(--u));top:calc(48*var(--u));background:var(--r);color:#fff;font-size:calc(16*var(--u));padding:calc(10*var(--u)) calc(22*var(--u))">Ver as peças em detalhe ↗</a>
+</section>
+
+<!-- 9 POSTS ESTATICO E STORIES -->
+<section class="slide t-g"><div class="s">
+<div class="ey">posts · proposta de layout · estático e stories</div><h2 style="width:calc(1136*var(--u));font-size:calc(40*var(--u))">Estático e stories de calendário</h2>
+<div style="position:absolute;left:calc(72*var(--u));top:calc(190*var(--u));display:flex;gap:calc(44*var(--u));align-items:flex-start"><div><img src="img/posts/est-2.png" class="pic" style="width:calc(352*var(--u))" alt=""><div class="cap">estático 2 · o que você leva</div></div><div><img src="img/posts/st-4.png" class="pic" style="height:calc(440*var(--u))" alt=""><div class="cap">stories 4 · É AMANHÃ · 09/12</div></div><div><img src="img/posts/st-5.png" class="pic" style="height:calc(440*var(--u))" alt=""><div class="cap">stories 5 · HOJE · 10/12</div></div></div></div><a class="bt" href="pecas/index.html#posts-est" target="_blank" rel="noopener" style="position:absolute;right:calc(72*var(--u));top:calc(48*var(--u));background:var(--r);color:#fff;font-size:calc(16*var(--u));padding:calc(10*var(--u)) calc(22*var(--u))">Ver as peças em detalhe ↗</a>
+</section>
+
+<!-- LEGENDAS POSTS UM -->
+<section class="slide t-n"><div class="s">
+<div class="ey">posts · legendas · orgânicos 1 e 2</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:calc(22*var(--u));margin-top:calc(22*var(--u));align-items:start"><div class="card" style="padding:calc(24*var(--u)) calc(28*var(--u))"><div class="lb">Orgânico 1 · carrossel</div><div style="font-size:calc(14*var(--u));color:var(--mut);margin-top:calc(4*var(--u))">Instagram e LinkedIn · data a definir pela equipe Vanzolini</div><p style="margin:calc(9*var(--u)) 0 0;font-size:calc(17*var(--u));line-height:1.38">Em qual etapa da jornada do seu cliente a IA já deveria estar trabalhando? 🤔</p><p style="margin:calc(9*var(--u)) 0 0;font-size:calc(17*var(--u));line-height:1.38">Do pré-atendimento ao pós-venda, a IA já personaliza o primeiro contato, resolve no autoatendimento, apoia o atendente e antecipa churn. Mais do que conhecer ferramentas, o desafio é saber onde aplicar e por onde começar. 💡</p><p style="margin:calc(9*var(--u)) 0 0;font-size:calc(17*var(--u));line-height:1.38">Em 2 horas, ao vivo e on-line, você aprende a aplicar IA em cada etapa da jornada e a priorizar iniciativas. 🎯</p><p style="margin:calc(9*var(--u)) 0 0;font-size:calc(17*var(--u));line-height:1.38">📅 Quinta, 10 de dezembro, das 19h às 21h<br>💰 De R$ 210,00 por R$ 29,99</p><p style="margin:calc(9*var(--u)) 0 0;font-size:calc(17*var(--u));line-height:1.38">👉 Inscreva-se: <span style="font-size:calc(12*var(--u));color:var(--mut);word-break:break-all">https://vanzolini.org.br/cursos/ia-na-experiencia-do-cliente-cx/?utm_source=instagram&amp;utm_medium=organico&amp;utm_campaign=ia-cx-dez26&amp;utm_content=org1-carrossel</span></p></div><div class="card" style="padding:calc(24*var(--u)) calc(28*var(--u))"><div class="lb">Orgânico 2 · estático</div><div style="font-size:calc(14*var(--u));color:var(--mut);margin-top:calc(4*var(--u))">Instagram e LinkedIn · data a definir pela equipe Vanzolini</div><p style="margin:calc(9*var(--u)) 0 0;font-size:calc(17*var(--u));line-height:1.38">Já pediram uma proposta de IA para o atendimento e faltou critério para priorizar? 🤔</p><p style="margin:calc(9*var(--u)) 0 0;font-size:calc(17*var(--u));line-height:1.38">No workshop, você sai com 4 materiais prontos para usar: checklist para projetos de IA, guia rápido de prompts para equipes de CX, matriz de priorização e o material completo em PDF. 📋</p><p style="margin:calc(9*var(--u)) 0 0;font-size:calc(17*var(--u));line-height:1.38">É o caminho para ir além da automação e decidir com mais segurança onde aplicar IA na sua operação. ✅</p><p style="margin:calc(9*var(--u)) 0 0;font-size:calc(17*var(--u));line-height:1.38">📅 Quinta, 10 de dezembro, das 19h às 21h, ao vivo<br>💰 De R$ 210,00 por R$ 29,99</p><p style="margin:calc(9*var(--u)) 0 0;font-size:calc(17*var(--u));line-height:1.38">👉 Inscreva-se: <span style="font-size:calc(12*var(--u));color:var(--mut);word-break:break-all">https://vanzolini.org.br/cursos/ia-na-experiencia-do-cliente-cx/?utm_source=instagram&amp;utm_medium=organico&amp;utm_campaign=ia-cx-dez26&amp;utm_content=org2-estatico</span></p></div></div></div></section>
+
+<!-- LEGENDAS POSTS DOIS -->
+<section class="slide t-n"><div class="s">
+<div class="ey">posts · legendas · orgânicos 3 e 4</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:calc(22*var(--u));margin-top:calc(22*var(--u));align-items:start"><div class="card" style="padding:calc(24*var(--u)) calc(28*var(--u))"><div class="lb">Orgânico 3 · carrossel</div><div style="font-size:calc(14*var(--u));color:var(--mut);margin-top:calc(4*var(--u))">Instagram e LinkedIn · data a definir pela equipe Vanzolini</div><p style="margin:calc(9*var(--u)) 0 0;font-size:calc(17*var(--u));line-height:1.38">Decidir onde e como implementar IA também faz parte da estratégia de CX. 🧭</p><p style="margin:calc(9*var(--u)) 0 0;font-size:calc(17*var(--u));line-height:1.38">Antes de investir em uma solução, olhe para os processos, os dados e as necessidades dos clientes. No workshop, você mapeia as dores da operação e usa uma matriz de priorização para decidir por onde começar. 📊</p><p style="margin:calc(9*var(--u)) 0 0;font-size:calc(17*var(--u));line-height:1.38">Com a professora Camile Altafini Alambert (25+ anos em CX, Amazon e L’Oréal) e o coordenador Roberto Marx. 👩‍🏫</p><p style="margin:calc(9*var(--u)) 0 0;font-size:calc(17*var(--u));line-height:1.38">📅 Quinta, 10 de dezembro, das 19h às 21h<br>💰 De R$ 210,00 por R$ 29,99</p><p style="margin:calc(9*var(--u)) 0 0;font-size:calc(17*var(--u));line-height:1.38">👉 Inscreva-se: <span style="font-size:calc(12*var(--u));color:var(--mut);word-break:break-all">https://vanzolini.org.br/cursos/ia-na-experiencia-do-cliente-cx/?utm_source=instagram&amp;utm_medium=organico&amp;utm_campaign=ia-cx-dez26&amp;utm_content=org3-carrossel</span></p></div><div class="card" style="padding:calc(24*var(--u)) calc(28*var(--u))"><div class="lb">Orgânico 4 · stories</div><div style="font-size:calc(14*var(--u));color:var(--mut);margin-top:calc(4*var(--u))">09/12 · legenda só se também sair no feed</div><p style="margin:calc(9*var(--u)) 0 0;font-size:calc(17*var(--u));line-height:1.38">É amanhã! Amanhã, das 19h às 21h, você aprende a aplicar IA em cada etapa da jornada do cliente e sai com checklist, guia de prompts e matriz de priorização. ⏰</p><p style="margin:calc(9*var(--u)) 0 0;font-size:calc(17*var(--u));line-height:1.38">Ainda não se inscreveu? De R$ 210,00 por R$ 29,99. 💰</p><p style="margin:calc(9*var(--u)) 0 0;font-size:calc(17*var(--u));line-height:1.38">👉 Inscreva-se: <span style="font-size:calc(12*var(--u));color:var(--mut);word-break:break-all">https://vanzolini.org.br/cursos/ia-na-experiencia-do-cliente-cx/?utm_source=instagram&amp;utm_medium=organico&amp;utm_campaign=ia-cx-dez26&amp;utm_content=org4-amanha</span></p></div></div></div></section>
+
+<!-- LEGENDAS POSTS TRES -->
+<section class="slide t-n"><div class="s">
+<div class="ey">posts · legendas · orgânico 5 e regras</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:calc(22*var(--u));margin-top:calc(22*var(--u));align-items:start"><div class="card" style="padding:calc(24*var(--u)) calc(28*var(--u))"><div class="lb">Orgânico 5 · stories</div><div style="font-size:calc(14*var(--u));color:var(--mut);margin-top:calc(4*var(--u))">10/12 · legenda só se também sair no feed</div><p style="margin:calc(9*var(--u)) 0 0;font-size:calc(17*var(--u));line-height:1.38">Hoje, das 19h às 21h. Em 2 horas, ao vivo, você aprende a identificar onde aplicar IA, antecipar necessidades dos clientes e analisar feedbacks em escala. ⏰</p><p style="margin:calc(9*var(--u)) 0 0;font-size:calc(17*var(--u));line-height:1.38">De R$ 210,00 por R$ 29,99. 💰</p><p style="margin:calc(9*var(--u)) 0 0;font-size:calc(17*var(--u));line-height:1.38">👉 Inscreva-se: <span style="font-size:calc(12*var(--u));color:var(--mut);word-break:break-all">https://vanzolini.org.br/cursos/ia-na-experiencia-do-cliente-cx/?utm_source=instagram&amp;utm_medium=organico&amp;utm_campaign=ia-cx-dez26&amp;utm_content=org5-hoje</span></p></div><div class="card" style="padding:calc(24*var(--u)) calc(28*var(--u));background:#EEEDFB"><div class="lb">Em toda legenda de feed</div><p style="margin:calc(10*var(--u)) 0 0;font-size:calc(17*var(--u));line-height:1.45"><b>Hashtags (as 8):</b> #ExperienciaDoCliente #CX #InteligenciaArtificial #IAaplicada #AtendimentoAoCliente #JornadaDoCliente #FundacaoVanzolini #VanzoliniIA</p><p style="margin:calc(12*var(--u)) 0 0;font-size:calc(17*var(--u));line-height:1.45"><b>Link:</b> UTM por peça (utm_source instagram ou linkedin, utm_medium organico, utm_campaign ia-cx-dez26, utm_content org1 a org5). No LinkedIn, trocar utm_source=instagram por linkedin.</p><p style="margin:calc(12*var(--u)) 0 0;font-size:calc(17*var(--u));line-height:1.45">No Instagram, link na legenda não clica: usar o mesmo link na bio e, nos stories, o adesivo de link.</p></div></div></div></section>
+
+<!-- 10 ADS META LINKEDIN -->
+<section class="slide t-g"><div class="s">
+<div class="ey">desdobramentos · anúncios</div><h2 style="width:calc(1136*var(--u));font-size:calc(46*var(--u))">Meta e LinkedIn, com duas chamadas</h2>
+<div style="position:absolute;left:calc(72*var(--u));top:calc(190*var(--u));display:flex;gap:calc(38*var(--u));align-items:flex-start"><div><div class="lb" style="color:var(--r);margin-bottom:calc(12*var(--u))">Meta · feed 1:1</div><div style="display:flex;gap:calc(14*var(--u));align-items:flex-start"><div><img src="img/ads/chamada-A-1x1.png" class="pic" style="width:calc(250*var(--u))" alt=""><div class="cap">chamada A</div></div><div><img src="img/ads/chamada-B-1x1.png" class="pic" style="width:calc(250*var(--u))" alt=""><div class="cap">chamada B</div></div></div></div><div><div class="lb" style="color:var(--r);margin-bottom:calc(12*var(--u))">LinkedIn · feed 1,91:1</div><div style="display:flex;gap:calc(14*var(--u));align-items:flex-start"><div><img src="img/ads/chamada-A-1x91.png" class="pic" style="width:calc(285*var(--u))" alt=""><div class="cap">chamada A</div></div><div><img src="img/ads/chamada-B-1x91.png" class="pic" style="width:calc(285*var(--u))" alt=""><div class="cap">chamada B</div></div></div></div></div></div><a class="bt" href="pecas/index.html#ads-a" target="_blank" rel="noopener" style="position:absolute;right:calc(72*var(--u));top:calc(48*var(--u));background:var(--r);color:#fff;font-size:calc(16*var(--u));padding:calc(10*var(--u)) calc(22*var(--u))">Ver as peças em detalhe ↗</a>
+</section>
+
+<!-- 11 ADS GOOGLE -->
+<section class="slide t-g"><div class="s">
+<div class="ey">desdobramentos · anúncios</div><h2 style="width:calc(1136*var(--u));font-size:calc(46*var(--u))">Google, com duas chamadas</h2>
+<div style="position:absolute;left:calc(72*var(--u));top:calc(190*var(--u))"><div class="lb" style="color:var(--r);margin-bottom:calc(12*var(--u))">Display e demand gen · 1,91:1</div><div style="display:flex;gap:calc(40*var(--u));align-items:flex-start"><div><img src="img/ads/chamada-A-1x91.png" class="pic" style="width:calc(548*var(--u))" alt=""><div class="cap">chamada A</div></div><div><img src="img/ads/chamada-B-1x91.png" class="pic" style="width:calc(548*var(--u))" alt=""><div class="cap">chamada B</div></div></div><p class="big" style="font-size:calc(20*var(--u));margin-top:calc(34*var(--u));color:var(--mut)">A pesquisa é só texto, com as mesmas duas chamadas. As legendas vêm nas páginas seguintes.</p></div></div><a class="bt" href="pecas/index.html#ads-a" target="_blank" rel="noopener" style="position:absolute;right:calc(72*var(--u));top:calc(48*var(--u));background:var(--r);color:#fff;font-size:calc(16*var(--u));padding:calc(10*var(--u)) calc(22*var(--u))">Ver as peças em detalhe ↗</a>
+</section>
+
+<!-- 12 CHAMADA A ARTES -->
+<section class="slide t-g"><div class="s">
+<div class="ey">anúncios · chamada A · aplicar</div><h2 style="text-wrap:balance;width:calc(1136*var(--u));font-size:calc(40*var(--u))">Você sabe como a IA está mudando a experiência do cliente?</h2>
+<div style="position:absolute;left:calc(72*var(--u));top:calc(190*var(--u));display:flex;gap:calc(40*var(--u));align-items:flex-start"><div><img src="img/ads/chamada-A-1x1.png" class="pic" style="height:calc(350*var(--u))" alt=""><div class="cap">feed 1:1</div></div><div><img src="img/ads/chamada-A-9x16.png" class="pic" style="height:calc(440*var(--u))" alt=""><div class="cap">stories e reels 9:16</div></div><div><img src="img/ads/chamada-A-1x91.png" class="pic" style="width:calc(440*var(--u))" alt=""><div class="cap">LinkedIn e Google 1,91:1</div></div></div></div><a class="bt" href="pecas/index.html#ads-a" target="_blank" rel="noopener" style="position:absolute;right:calc(72*var(--u));top:calc(48*var(--u));background:var(--r);color:#fff;font-size:calc(16*var(--u));padding:calc(10*var(--u)) calc(22*var(--u))">Ver as peças em detalhe ↗</a>
+</section>
+
+<!-- 13 CHAMADA A LEGENDAS -->
+<section class="slide t-n"><div class="s">
+<div class="ey">anúncios · chamada A · legendas</div>
+<div style="display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:calc(20*var(--u));margin-top:calc(22*var(--u))">
+<div class="card cd"><div class="lb">Meta · texto principal</div><p>Você sabe como a IA está mudando a experiência do cliente? Saber que ela existe não basta: é preciso aplicar na prática. Em 2 horas, ao vivo e on-line, você vê onde usar IA na jornada do cliente. 10/12, das 19h às 21h, com certificado. De R$ 210,00 por R$ 29,99. Inscreva-se agora!</p>
+<div class="lb">Título · descrição · botão</div><p style="font-size:calc(20*var(--u))">IA aplicada na prática de CX<br>10/12 · 19h às 21h · ao vivo<br>Inscreva-se</p></div>
+<div class="card cd"><div class="lb">LinkedIn · introdução</div><p>A IA já permite personalizar e antecipar necessidades. Sua equipe de CX já sabe aplicar? Ao vivo, 10/12, 19h. De R$ 210,00 por R$ 29,99.</p>
+<div class="lb">Título · botão</div><p style="font-size:calc(20*var(--u))">IA aplicada na prática da Experiência dos Clientes (CX)<br>Inscrever-se</p></div>
+<div class="card cd"><div class="lb">Google · pesquisa</div><p style="font-size:calc(20*var(--u))"><b>Títulos:</b> IA aplicada na prática de CX · Aula ao vivo, 10/12 · Inscreva-se agora</p><p style="font-size:calc(20*var(--u))"><b>Descrições:</b> Aprenda a aplicar IA na jornada do cliente. 2 horas, on-line, ao vivo e com certificado. · 10/12, das 19h às 21h. De R$ 210,00 por R$ 29,99. Inscreva-se agora!</p>
+<div class="lb">Display · título longo</div><p style="font-size:calc(20*var(--u))">Aprenda a aplicar IA na jornada do cliente em 2 horas, ao vivo e com certificado</p></div>
+</div>
+<div class="src" style="position:absolute;left:calc(72*var(--u));bottom:calc(30*var(--u))">Limites respeitados: Meta título até 40, LinkedIn título até 70, Google título até 30 e descrição até 90 caracteres.</div>
+</div></section>
+
+<!-- 14 CHAMADA B ARTES -->
+<section class="slide t-g"><div class="s">
+<div class="ey">anúncios · chamada B · decidir</div><h2 style="text-wrap:balance;width:calc(1136*var(--u));font-size:calc(40*var(--u))">Onde estão os gargalos da jornada do seu cliente?</h2>
+<div style="position:absolute;left:calc(72*var(--u));top:calc(190*var(--u));display:flex;gap:calc(40*var(--u));align-items:flex-start"><div><img src="img/ads/chamada-B-1x1.png" class="pic" style="height:calc(350*var(--u))" alt=""><div class="cap">feed 1:1</div></div><div><img src="img/ads/chamada-B-9x16.png" class="pic" style="height:calc(440*var(--u))" alt=""><div class="cap">stories e reels 9:16</div></div><div><img src="img/ads/chamada-B-1x91.png" class="pic" style="width:calc(440*var(--u))" alt=""><div class="cap">LinkedIn e Google 1,91:1</div></div></div></div><a class="bt" href="pecas/index.html#ads-b" target="_blank" rel="noopener" style="position:absolute;right:calc(72*var(--u));top:calc(48*var(--u));background:var(--r);color:#fff;font-size:calc(16*var(--u));padding:calc(10*var(--u)) calc(22*var(--u))">Ver as peças em detalhe ↗</a>
+</section>
+
+<!-- 15 CHAMADA B LEGENDAS -->
+<section class="slide t-n"><div class="s">
+<div class="ey">anúncios · chamada B · legendas</div>
+<div style="display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:calc(20*var(--u));margin-top:calc(22*var(--u))">
+<div class="card cd"><div class="lb">Meta · texto principal</div><p>Onde estão os gargalos da jornada do seu cliente? Implementar IA em CX vai muito além de escolher uma ferramenta. Aula ao vivo, 10/12, das 19h às 21h, com checklist, guia de prompts e matriz de priorização. De R$ 210,00 por R$ 29,99. Inscreva-se agora!</p>
+<div class="lb">Título · descrição · botão</div><p style="font-size:calc(20*var(--u))">Decisões de CX com IA, na prática<br>Ao vivo · com certificado<br>Inscreva-se</p></div>
+<div class="card cd"><div class="lb">LinkedIn · introdução</div><p>Implementar IA em CX vai além da ferramenta: dados, equipes, LGPD e atendimento humano. Ao vivo, 10/12, 19h. De R$ 210,00 por R$ 29,99.</p>
+<div class="lb">Título · botão</div><p style="font-size:calc(20*var(--u))">Decisões de IA em CX com dados, equipes e LGPD<br>Inscrever-se</p></div>
+<div class="card cd"><div class="lb">Google · pesquisa</div><p style="font-size:calc(20*var(--u))"><b>Títulos:</b> Como aplicar IA em CX · Curso rápido de IA para CX · Com certificado Vanzolini</p><p style="font-size:calc(20*var(--u))"><b>Descrições:</b> Veja onde a IA entra na jornada do cliente e como decidir. Ao vivo, 2h, 10/12, 19h. · Fundação Vanzolini. De R$ 210,00 por R$ 29,99. Inscreva-se agora!</p>
+<div class="lb">Display · título longo</div><p style="font-size:calc(20*var(--u))">Implementar IA em CX vai além da ferramenta. Veja como decidir, ao vivo, em 10/12</p></div>
+</div>
+<div class="src" style="position:absolute;left:calc(72*var(--u));bottom:calc(30*var(--u))">Materiais citados (checklist, guia de prompts, matriz de priorização) conforme a página do curso. Destino: página do curso com UTM utm_campaign=ia-cx-dez26.</div>
+</div></section>
+
+<!-- 16 EMAILS -->
+<section class="slide t-g"><div class="s">
+<div class="ey">desdobramentos · e-mails</div>
+<div style="position:absolute;left:calc(72*var(--u));top:calc(230*var(--u));width:calc(430*var(--u))">
+<div style="font-size:calc(72*var(--u));font-weight:900;letter-spacing:-.03em;line-height:1;color:var(--ind)">9 e-mails</div>
+<p class="big" style="font-size:calc(22*var(--u));margin-top:calc(16*var(--u));color:var(--mut)">Venda, matriculados e pós-aula, de 30/11 a 11/12, com dois assuntos para teste A/B em cada um.</p>
+<a class="bt" href="emails/index.html" target="_blank" rel="noopener" style="margin-top:calc(34*var(--u));background:var(--r);color:#fff">Abrir os e-mails para correção ↗</a></div>
+<div style="position:absolute;right:calc(72*var(--u));top:calc(64*var(--u));display:flex;gap:calc(22*var(--u))">
+<div style="width:calc(196*var(--u))"><div class="scr" style="height:calc(560*var(--u))"><img src="img/emails/A1_convite.jpg" alt="" style="animation:scr3 30s ease-in-out 0s infinite"></div><div class="cap" style="margin-top:calc(8*var(--u))">A1 · convite · 30/11</div></div>
+<div style="width:calc(196*var(--u))"><div class="scr" style="height:calc(560*var(--u))"><img src="img/emails/A4_amanha.jpg" alt="" style="animation:scr3 30s ease-in-out 1.2s infinite"></div><div class="cap" style="margin-top:calc(8*var(--u))">A4 · é amanhã · 09/12</div></div>
+<div style="width:calc(196*var(--u))"><div class="scr" style="height:calc(560*var(--u))"><img src="img/emails/B1_boas_vindas.jpg" alt="" style="animation:scr3 30s ease-in-out 2.4s infinite"></div><div class="cap" style="margin-top:calc(8*var(--u))">B1 · boas-vindas</div></div>
+</div></div></section>
+
+<!-- 17 EMAILS BANNERS -->
+<section class="slide t-g"><div class="s">
+<div class="ey">desdobramentos · e-mails · banners</div><h2 style="font-size:calc(40*var(--u))">Um banner por e-mail</h2>
+<div style="position:absolute;left:calc(72*var(--u));top:calc(176*var(--u));display:flex;gap:calc(24*var(--u));align-items:flex-start"><div><img src="img/emails/banner-convite-v.jpg" class="pic" style="width:calc(196*var(--u))" alt=""><div class="cap" style="font-size:calc(14*var(--u))">A1 · convite · 30/11</div></div><div><img src="img/emails/banner-decisao-v.jpg" class="pic" style="width:calc(196*var(--u))" alt=""><div class="cap" style="font-size:calc(14*var(--u))">A2 · decisão · 03/12</div></div><div><img src="img/emails/banner-materiais.jpg" class="pic" style="width:calc(196*var(--u))" alt=""><div class="cap" style="font-size:calc(14*var(--u))">A3 · materiais · 07/12</div></div><div><img src="img/emails/banner-amanha-v.jpg" class="pic" style="width:calc(196*var(--u))" alt=""><div class="cap" style="font-size:calc(14*var(--u))">A4 · é amanhã · 09/12</div></div><div><img src="img/emails/banner-hoje-v.jpg" class="pic" style="width:calc(196*var(--u))" alt=""><div class="cap" style="font-size:calc(14*var(--u))">A5 · hoje · 10/12</div></div></div>
+<div style="position:absolute;left:calc(72*var(--u));top:calc(452*var(--u));display:flex;gap:calc(24*var(--u));align-items:flex-start"><div><img src="img/emails/banner-matricula-v.jpg" class="pic" style="width:calc(196*var(--u))" alt=""><div class="cap" style="font-size:calc(14*var(--u))">B1 · boas-vindas · na inscrição</div></div><div><img src="img/emails/banner-vespera-v.jpg" class="pic" style="width:calc(196*var(--u))" alt=""><div class="cap" style="font-size:calc(14*var(--u))">B3 · véspera · 09/12</div></div><div><img src="img/emails/banner-link-v.jpg" class="pic" style="width:calc(196*var(--u))" alt=""><div class="cap" style="font-size:calc(14*var(--u))">B4 · link da aula · 10/12</div></div><div><img src="img/emails/banner-pos-v.jpg" class="pic" style="width:calc(196*var(--u))" alt=""><div class="cap" style="font-size:calc(14*var(--u))">C1 · pós-aula · 11/12</div></div></div>
+</div><a class="bt" href="emails/index.html" target="_blank" rel="noopener" style="position:absolute;right:calc(72*var(--u));top:calc(48*var(--u));background:var(--r);color:#fff;font-size:calc(16*var(--u));padding:calc(10*var(--u)) calc(22*var(--u))">Ver os e-mails ↗</a>
+</section>
+
+<!-- 13 PROXIMOS PASSOS -->
+<section class="slide t-k"><div class="s">
+<div class="ey">próximos passos</div><h2 style="color:#fff;font-size:calc(52*var(--u))">Do KV às peças no ar</h2>
+<div class="tl" style="margin-top:calc(190*var(--u))">
+<div><b>18/11</b><span>Apresentação da campanha</span></div>
+<div><b>19/11</b><span>Início da campanha, após a aprovação</span></div>
+<div><b>Equipe<br>Vanzolini</b><span>Define as datas dos posts</span></div>
+<div><b>30/11<br>a 11/12</b><span>E-mails no ar</span></div>
+<div><b>10/12</b><span>Dia da aula, às 19h</span></div></div></div></div></section>
+
+
+
+<style>@keyframes scr2{0%,6%{transform:translateY(0)}94%,100%{transform:translateY(calc(-100% + 500*var(--u)))}}</style>
+<script>
+const sl=[...document.querySelectorAll('.slide')];let i=0;
+function show(n){i=Math.max(0,Math.min(sl.length-1,n));sl.forEach((s,k)=>s.classList.toggle('on',k===i));}
+function toggle(){document.body.classList.toggle('present');if(document.body.classList.contains('present'))show(i)}
+document.getElementById('btn').onclick=toggle;
+addEventListener('keydown',e=>{
+ if(e.key==='p'||e.key==='P'){toggle();return}
+ if(!document.body.classList.contains('present'))return;
+ if(['ArrowRight','ArrowDown',' ','PageDown'].includes(e.key)){e.preventDefault();show(i+1)}
+ if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault();show(i-1)}
+ if(e.key==='Escape'){document.body.classList.remove('present')}
+});
+const h=parseInt(location.hash.slice(1));if(h){document.body.classList.add('present');show(h-1)}
+</script></body></html>
